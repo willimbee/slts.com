@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language translation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  
+  <nav class="fixed w-full top-0 bg-white shadow-md z-50">
+    <div class="nav">
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 opacity-50"></div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#" class="flex items-center">
+            <img src="Untitled_design__2_-removebg-preview.png" alt="logo">
+            
+          </a>
+        </div>
+  
+        <!-- Navigation principale -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Accueil</a>
+          <a href="#traduction" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Traduction</a>
+          <a href="#formation" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Formation</a>
+          <a href="#temoignage" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Témoignage</a>
+          <a href="#contact" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Contact</a>
+        </div>
+  
+        <!-- Menu mobile -->
+        <div class="md:hidden">
+          <button 
+            type="button" 
+            onclick="
+              const mobileMenu = document.getElementById('mobile-menu');
+              const menuIcon = this.querySelector('.menu-icon');
+              const closeIcon = this.querySelector('.close-icon');
+              mobileMenu.classList.toggle('hidden');
+              menuIcon.classList.toggle('hidden');
+              closeIcon.classList.toggle('hidden');
+            "
+            class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200"
+          >
+            <svg class="h-6 w-6 menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg class="h-6 w-6 close-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+  
+      <!-- Menu mobile panel -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200">Accueil</a>
+          <a href="#traduction" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200">Traduction</a>
+          <a href="#formation" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200">Formation</a>
+          <a href="#temoignage" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200">Témoignage</a>
+          <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200">Contact</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </nav>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full mb-8 shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 mr-2"></span>
+              <span class="text-sm font-medium bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-transparent mb-5">Nouveau : Cours en ligne disponibles</span>
+            </div>
+           <div data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-8  leading-tight tracking-tight">
+              Transformez vos compétences linguistiques en 
+              <span class="relative">
+                <span class="relative z-10 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">opportunités professionnelles</span>
+                <span class="absolute bottom-2 left-0 w-full h-3 bg-gradient-to-r from-blue-100 to-indigo-100 -z-10 transform -rotate-1"></span>
+              </span>
+            </h1>
+            <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Améliorez vos compétences linguistiques avec nos cours certifiés et nos services de traduction professionnelle. 
+              Bénéficiez d'une expertise de qualité pour atteindre vos objectifs.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+              <a href="https://forms.gle/YcVH7v2exVdcUPiL8" target="_blank" class="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-200/50 hover:scale-105 transform register w-250">
+                Inscription maintenant
+              </a>
+              <a href="#formation" class="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-gray-700 bg-white border-2 border-gray-100 hover:border-gray-200 rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-sm hover:shadow-md">
+                Voir nos services
+              </a>
+            </div>
+           </div>
+          </div>
+      
+          <!-- Slider avec Swiper -->
+          <div class="relative" data-aos="fade-right">
+            <div class="swiper mySwiper swip">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/img1.jpg" alt="Slide 1" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/img2.jpg" alt="Slide 2" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/img3.jpg" alt="Slide 3" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/img4.jpg" alt="Slide 3" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/img5.jpg" alt="Slide 3" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/img6.jpg" alt="Slide 3" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/img7.jpg" alt="Slide 3" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/img8.jpg" alt="Slide 3" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/img9.jpg" alt="Slide 3" class="rounded-xl shadow-lg w-full">
+                </div>
+              </div>
+              <!-- Boutons de navigation -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+      
+          <!-- Statistiques et métriques -->
+          <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-gray-100 pt-12">
+            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+              <div class="text-3xl font-bold bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-transparent mb-2">10k+</div>
+              <div class="text-sm text-gray-600">Clients satisfaits</div>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+              <div class="text-3xl font-bold bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-transparent mb-2">95%</div>
+              <div class="text-sm text-gray-600">Taux de réussite aux examens</div>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="900">
+              <div class="text-3xl font-bold bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-transparent mb-2">24/7</div>
+              <div class="text-sm text-gray-600">Support client</div>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="1200">
+              <div class="text-3xl font-bold bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-transparent mb-2">99.9%</div>
+              <div class="text-sm text-gray-600">Traductions certifiées</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Inclusion de Swiper.js -->
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+        const swiper = new Swiper('.mySwiper', {
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+        });
+      </script>
+      
+<section class="relative py-24 bg-gradient-to-br from-white to-blue-50 overflow-hidden" id="traduction">
+    <div class="container mx-auto px-4 relative z-10 max-w-7xl">
+      <div class="max-w-3xl mx-auto mb-24 text-center">
+        <span class="inline-block px-4 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium tracking-wider mb-6 transform hover:scale-105 transition-transform duration-300" data-aos="fade-down">
+          Services
+        </span>
+        <h2 class="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-8" data-aos="fade-up">
+          Nos Services
+        </h2>
+        <p class="text-gray-600 text-lg leading-relaxed" data-aos="fade-left">
+          Nous offrons des services de traduction, d'interprétariat et de formation de haute qualité.
+        </p>
+      </div>
+  
+      <!-- Grille de services -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Service 1 : Traduction -->
+        <div class="group p-6 bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-14 h-14 bg-gradient-to-tr from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Traduction</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Nous fournissons des traductions certifiées, rapides et précises pour divers documents.
+          </p>
+        </div>
+  
+        <!-- Service 2 : Interprétariat -->
+        <div class="group p-6 bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="600">
+          <div class="w-14 h-14 bg-gradient-to-tr from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Interprétariat</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Profitez de notre expertise lors de vos sommets, conférences et réunions.
+          </p>
+        </div>
+  
+        <!-- Service 3 : Formation -->
+        <div class="group p-6 bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="900">
+          <div class="w-14 h-14 bg-gradient-to-tr from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Formation</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Préparez-vous aux tests de langue avec nos cours d'anglais, d'allemand et d'espagnol.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="relative py-24 bg-white overflow-hidden" id="formation">
+    <div class="container mx-auto px-4 relative z-10 max-w-7xl">
+      <div class="max-w-3xl mx-auto mb-24 text-center">
+        <span class="inline-block px-4 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-medium tracking-wider mb-6 transform hover:scale-105 transition-transform duration-300">
+          Cours de Langues
+        </span>
+        <h2 class="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2  h-20">
+          Nos Cours de Langues
+        </h2>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          Améliorez vos compétences linguistiques avec nos cours d'anglais, d'allemand et d'espagnol.
+        </p>
+      </div>
+  
+      <!-- Grille de cours -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Cours 1 : Anglais -->
+        <div class="group p-6 bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 text-center">
+          <div class="w-14 h-14 bg-gradient-to-tr from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Anglais</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Cours d'anglais général et académique pour tous les niveaux.
+          </p>
+        </div>
+  
+        <!-- Cours 2 : Allemand -->
+        <div class="group p-6 bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 text-center">
+          <div class="w-14 h-14 bg-gradient-to-tr from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Allemand</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Cours d'allemand général pour tous les niveaux.
+          </p>
+        </div>
+  
+        <!-- Cours 3 : Espagnol -->
+        <div class="group p-6 bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 text-center">
+          <div class="w-14 h-14 bg-gradient-to-tr from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Espagnol</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Cours d'espagnol général pour tous les niveaux.
+          </p>
+        </div>
+       
+      </div>
+      <a href="https://forms.gle/YcVH7v2exVdcUPiL8" class="flex items-center justify-center mx-auto register" data-aos="fade-down">Inscription</a>
+    </div>
+  </section>
+<section class="py-16 bg-gradient-to-br from-blue-50 to-indigo-100" id="temoignage">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="inline-block px-3 py-1 text-xs font-semibold text-indigo-600 bg-indigo-100 rounded-full mb-3">Témoignages</span>
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl tracking-tight">
+        Paroles de clients satisfaits
+      </h2>
+      <div class="mt-4 max-w-2xl mx-auto">
+        <div class="h-0.5 w-16 bg-indigo-500 mx-auto"></div>
+      </div>
+    </div>
+
+    <!-- Témoignages des clients particuliers -->
+    <div class="mb-12">
+      <h3 class="text-xl font-semibold text-gray-800 mb-6 text-center" data-aos="fade-up">Nos clients particuliers</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <!-- Témoignage 1 -->
+        <div class="p-6 bg-white rounded-lg shadow-sm border border-gray-200 transition-transform hover:shadow-md hover:-translate-y-1 duration-300" data-aos="fade-up" data-aos-delay="300">
+          <div class="flex items-center mb-4">
+            <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Avatar">
+            <div class="ml-3">
+              <p class="font-medium text-gray-900 text-sm">Sophie Martin</p>
+              <p class="text-xs text-indigo-600">Cliente depuis 2020</p>
+            </div>
+          </div>
+          <p class="text-gray-600 text-sm italic mb-4">
+            "Un service exceptionnel qui a dépassé toutes mes attentes. L'équipe est professionnelle et réactive."
+          </p>
+          <div class="flex text-amber-400">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          </div>
+        </div>
+
+        <!-- Témoignage 2 -->
+        <div class="p-6 bg-white rounded-lg shadow-sm border border-gray-200 transition-transform hover:shadow-md hover:-translate-y-1 duration-300" data-aos="fade-up" data-aos-delay="600">
+          <div class="flex items-center mb-4">
+            <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Avatar">
+            <div class="ml-3">
+              <p class="font-medium text-gray-900 text-sm">Thomas Dubois</p>
+              <p class="text-xs text-indigo-600">Client depuis 2019</p>
+            </div>
+          </div>
+          <p class="text-gray-600 text-sm italic mb-4">
+            "Grâce à leur expertise, j'ai pu réaliser mon projet dans les délais. Une collaboration que je recommande vivement."
+          </p>
+          <div class="flex text-amber-400">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+<section class="relative py-12 sm:py-20 overflow-hidden bg-gradient-to-br from-violet-50 via-white to-indigo-50" id="contact" data-aos="fade-down">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-5xl mx-auto">
+        <!-- En-tête avec animation -->
+        <div class="text-center mb-12 space-y-4">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-indigo-600 inline-block transform transition-all duration-500 hover:scale-105">
+            Contactez-nous
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Nous sommes impatients de collaborer avec vous pour donner vie à vos idées.
+          </p>
+        </div>
+  
+        <!-- Conteneur principal avec effet de carte -->
+        <div class="grid lg:grid-cols-5 gap-8 items-start">
+          <!-- Formulaire -->
+          <div class="lg:col-span-3 bg-white rounded-2xl shadow-xl p-8 transform transition-all duration-500 hover:shadow-2xl">
+            <form class="space-y-6">
+              <!-- Nom complet -->
+              <div class="relative group">
+                <label class="block text-sm font-medium text-gray-700 mb-1 transition-colors group-hover:text-violet-600">
+                  Nom complet
+                </label>
+                <input
+                  type="text"
+                  class="block w-full px-4 py-3 rounded-xl bg-gray-50 border-2 border-gray-200 focus:border-violet-500 focus:ring focus:ring-violet-200 transition-all duration-300"
+                  placeholder=""
+                  required
+                />
+              </div>
+  
+              <!-- Email -->
+              <div class="relative group">
+                <label class="block text-sm font-medium text-gray-700 mb-1 transition-colors group-hover:text-violet-600">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  class="block w-full px-4 py-3 rounded-xl bg-gray-50 border-2 border-gray-200 focus:border-violet-500 focus:ring focus:ring-violet-200 transition-all duration-300"
+                  placeholder=""
+                  required
+                />
+              </div>
+  
+              <!-- Sujet -->
+              <div class="relative group">
+                <label class="block text-sm font-medium text-gray-700 mb-1 transition-colors group-hover:text-violet-600">
+                  Sujet
+                </label>
+                <select
+                  class="block w-full px-4 py-3 rounded-xl bg-gray-50 border-2 border-gray-200 focus:border-violet-500 focus:ring focus:ring-violet-200 transition-all duration-300"
+                  required
+                >
+                  <option value="">Sélectionnez un sujet</option>
+                  <option value="business">Proposition commerciale</option>
+                  <option value="support">Support technique</option>
+                  <option value="other">Autre demande</option>
+                </select>
+              </div>
+  
+              <!-- Message -->
+              <div class="relative group">
+                <label class="block text-sm font-medium text-gray-700 mb-1 transition-colors group-hover:text-violet-600">
+                  Message
+                </label>
+                <textarea
+                  rows="4"
+                  class="block w-full px-4 py-3 rounded-xl bg-gray-50 border-2 border-gray-200 focus:border-violet-500 focus:ring focus:ring-violet-200 transition-all duration-300 resize-none"
+                  placeholder="Votre message..."
+                  required
+                ></textarea>
+              </div>
+  
+              <!-- Bouton d'envoi -->
+              <button
+                type="submit"
+                class="w-full inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-violet-600 to-indigo-600 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500"
+              >
+                <span>Envoyer le message</span>
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </button>
+            </form>
+          </div>
+  
+          <!-- Informations de contact -->
+          <div class="lg:col-span-2 space-y-6">
+            <!-- Carte d'information -->
+            <div class="bg-white rounded-2xl shadow-xl p-8 space-y-8">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Informations de contact</h3>
+              
+              <!-- Email -->
+              <div class="flex items-start space-x-4 group">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                    <svg class="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-sm font-medium text-gray-900">Email</h4>
+                  <p class="mt-1 text-sm text-gray-600">sedjiflanguagesandtranslation@gmail.com</p>
+                </div>
+              </div>
+  
+              <!-- Téléphone -->
+              <div class="flex items-start space-x-4 group">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                    <svg class="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-sm font-medium text-gray-900">Téléphone</h4>
+                  <p class="mt-1 text-sm text-gray-600">+228 92 60 91 33</p>
+                  <p class="mt-1 text-sm text-gray-600">+228 98 33 95 71</p>
+                </div>
+              </div>
+  
+              <!-- Localisation -->
+              <div class="flex items-start space-x-4 group">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                    <svg class="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-sm font-medium text-gray-900">Adresse</h4>
+                  <p class="mt-1 text-sm text-gray-600">Amadahomé</p>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Horaires d'ouverture -->
+            <div class="bg-gradient-to-br from-violet-600 to-indigo-600 rounded-2xl shadow-xl p-8 text-white">
+              <h3 class="text-xl font-bold mb-4">Horaires d'ouverture</h3>
+              <div class="space-y-3">
+                <div class="flex justify-between">
+                  <span>Lundi - Samedi</span>
+                  <span>08h - 20h</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Dimanche</span>
+                  <span>Fermé</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<footer class="relative bg-white py-20" data-aos="fade-down" data-aos-delay="300">
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="flex flex-col items-center text-center space-y-10">
+        <!-- Logo et Titre avec animation -->
+        <div class="group cursor-pointer">
+          <div class="flex items-center space-x-4 transform group-hover:scale-105 transition-all duration-300">
+            <div class="relative">
+              <img src="Untitled_design__2_-removebg-preview.png" alt="">
+              <div class="absolute inset-0 bg-purple-200 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300 -z-10"></div>
+            </div>
+            <span class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-400">Cabinet de Traduction</span>
+          </div>
+        </div>
+        
+        <!-- Description avec style amélioré -->
+        <div class="max-w-2xl space-y-4">
+          <p class="text-gray-600 text-lg leading-relaxed">
+            Votre satisfaction est notre priorité. Nous offrons des services de traduction, d'interprétariat et de formation de haute qualité.
+          </p>
+          <p class="text-sm text-purple-500 font-medium">Innovation • Créativité • Excellence</p>
+        </div>
+        
+        <!-- Réseaux sociaux avec effets améliorés -->
+        <div class="flex space-x-8">
+          <a href="#" class="group relative">
+            <span class="sr-only">Facebook</span>
+            <div class="p-4 rounded-xl bg-gray-50 group-hover:bg-purple-50 transition-all duration-300 transform group-hover:-translate-y-1">
+              <svg class="h-6 w-6 text-gray-400 group-hover:text-purple-600 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+              </svg>
+            </div>
+            <div class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-px w-8 bg-purple-200 scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+          </a>
+          <a href="#" class="group relative">
+            <span class="sr-only">Twitter</span>
+            <div class="p-4 rounded-xl bg-gray-50 group-hover:bg-purple-50 transition-all duration-300 transform group-hover:-translate-y-1">
+              <svg class="h-6 w-6 text-gray-400 group-hover:text-purple-600 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+              </svg>
+            </div>
+            <div class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-px w-8 bg-purple-200 scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+          </a>
+        
+        </div>
+        
+        <!-- Navigation avec style amélioré -->
+        <div class="flex flex-wrap justify-center gap-8">
+          <a href="#" class="group relative text-gray-600 hover:text-purple-600 transition-colors duration-300">
+            <span class="text-sm font-medium">Accueil</span>
+            <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </a>
+          <a href="#" class="group relative text-gray-600 hover:text-purple-600 transition-colors duration-300">
+            <span class="text-sm font-medium">À propos</span>
+            <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </a>
+          <a href="#" class="group relative text-gray-600 hover:text-purple-600 transition-colors duration-300">
+            <span class="text-sm font-medium">Services</span>
+            <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </a>
+          <a href="#" class="group relative text-gray-600 hover:text-purple-600 transition-colors duration-300">
+            <span class="text-sm font-medium">Contact</span>
+            <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Copyright avec style amélioré -->
+      <div class="mt-16 pt-8 border-t border-gray-100">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <p class="text-gray-500 text-sm">
+            © 2025 Cabinet de Traduction. Tous droits réservés.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-purple-500 text-sm transition-colors duration-300">Politique de confidentialité</a>
+            <a href="#" class="text-gray-400 hover:text-purple-500 text-sm transition-colors duration-300">Conditions d'utilisation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</body>
+</html>

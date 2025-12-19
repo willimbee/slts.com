@@ -1,0 +1,26 @@
+.swip{
+    height:90vh;
+}
+.swiper-slide img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.bg-img{
+    background: url("slide2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.register{
+    border: 1px solid #333;
+    padding: 10px 20px;
+    margin-top: 25px;
+    width: 13%;
+    border-radius: 8px 18px;
+    transition: .3s ease-in-out;
+}
+.register:hover{
+    background-color: #474CE6;
+    color: #fff;
+    border: 1px solid #fff;
+}
